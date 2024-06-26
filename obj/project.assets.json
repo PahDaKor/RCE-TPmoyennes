@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yopay\\source\\repos\\RCE_TPMoyennes\\RCE-TPmoyennes.csproj",
-      "projectName": "RCE-TPmoyennes",
-      "projectPath": "C:\\Users\\yopay\\source\\repos\\RCE_TPMoyennes\\RCE-TPmoyennes.csproj",
+      "projectUniqueName": "C:\\Users\\yopay\\source\\repos\\RCE_TPMoyennes\\RCE_TPmoyennes.csproj",
+      "projectName": "RCE_TPmoyennes",
+      "projectPath": "C:\\Users\\yopay\\source\\repos\\RCE_TPMoyennes\\RCE_TPmoyennes.csproj",
       "packagesPath": "C:\\Users\\yopay\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\yopay\\source\\repos\\RCE_TPMoyennes\\obj\\",
       "projectStyle": "PackageReference",
