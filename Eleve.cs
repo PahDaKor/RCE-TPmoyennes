@@ -12,7 +12,6 @@ namespace TPMoyennes
         public string prenom { get; private set; }
         private List<Note> note;
         private readonly static int maxNote = 200;
-        private Classe classe;
         private Dictionary<int,double> sommeNotes;
         private Dictionary<int, int> nbNotes;
         public Eleve(string prenom, string nom)
@@ -29,7 +28,7 @@ namespace TPMoyennes
         {
             if (this.note.Count == maxNote)
             {
-                throw new Exception("Nombre de note max deja atteint");
+                throw new Exception("Nombre maximum note");
             }
             this.note.Add(note);
 
@@ -48,7 +47,7 @@ namespace TPMoyennes
         public double moyenneMatiere(int matiere)
         {
             if (!this.sommeNotes.ContainsKey(matiere)){
-                throw new Exception();
+                throw new Exception("Eleve ne possede pas la matiere");
             }else { 
                 return Math.Truncate( 100 * this.sommeNotes[matiere] / this.nbNotes[matiere])/100;
             }
@@ -56,7 +55,7 @@ namespace TPMoyennes
 
         public double moyenneGeneral()
         {
-            if(!note.Any()) throw new Exception();
+            if(!note.Any()) throw new Exception("Eleve ne possede pas de note");
 
             double somme = 0;
             int nb = sommeNotes.Keys.Count;

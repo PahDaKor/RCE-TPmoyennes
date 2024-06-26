@@ -26,7 +26,7 @@ namespace TPMoyennes
         {
             if (this.eleves.Count == maxEleve)
             {
-                throw new Exception();
+                throw new Exception("Classe, nombre d'eleve max atteint");
             }
             this.eleves.Add(new Eleve(prenom, nom));
         }
@@ -35,13 +35,13 @@ namespace TPMoyennes
         {
             if (this.matieres.Count == maxMatiere)
             {
-                throw new Exception();
+                throw new Exception("Classe, nombre de matiere max atteint");
             }
             this.matieres.Add(matiere);
         }
 
         public double moyenneMatiere(int matiere) {
-            if(!this.eleves.Any()) throw new Exception();
+            if(!this.eleves.Any()) throw new Exception("Classe, pas d'eleve");
             double somme = 0;
             foreach(Eleve eleve in this.eleves)
             {
@@ -52,7 +52,7 @@ namespace TPMoyennes
 
         public double moyenneGeneral()
         {
-            if (!this.eleves.Any()) throw new Exception();
+            if (!this.eleves.Any()) throw new Exception("Classe, pas d'eleve");
             double somme = 0;
             for (int matiere = 0; matiere < this.matieres.Count; matiere++)
             {
