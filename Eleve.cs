@@ -28,7 +28,7 @@ namespace TPMoyennes
         {
             if (this.note.Count == maxNote)
             {
-                throw new Exception("Nombre maximum note");
+                throw new Exception("Eleve, Nombre maximum note");
             }
             this.note.Add(note);
 
@@ -47,7 +47,7 @@ namespace TPMoyennes
         public double moyenneMatiere(int matiere)
         {
             if (!this.sommeNotes.ContainsKey(matiere)){
-                throw new Exception("Eleve ne possede pas la matiere");
+                throw new Exception("Eleve ne possede pas de note dans la matiere");
             }else { 
                 return Math.Truncate( 100 * this.sommeNotes[matiere] / this.nbNotes[matiere])/100;
             }
