@@ -11,7 +11,7 @@ namespace TPMoyennes
         public string nom { get; private set; }
         public string prenom { get; private set; }
         private List<Note> note;
-        private static int maxNote = 200;
+        private readonly static int maxNote = 200;
         private Classe classe;
         private Dictionary<int,double> sommeNotes;
         private Dictionary<int, int> nbNotes;
@@ -56,6 +56,8 @@ namespace TPMoyennes
 
         public double moyenneGeneral()
         {
+            if(!note.Any()) throw new Exception();
+
             double somme = 0;
             int nb = sommeNotes.Keys.Count;
             foreach(int matiere in sommeNotes.Keys)

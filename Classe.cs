@@ -33,7 +33,7 @@ namespace TPMoyennes
 
         public void ajouterMatiere(string matiere)
         {
-            if (this.matieres.Count == maxEleve)
+            if (this.matieres.Count == maxMatiere)
             {
                 throw new Exception();
             }
